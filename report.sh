@@ -8,9 +8,11 @@ RESIZE_WIDTH=640
 RESIZE_HEIGHT=480
 ACTIVITY_LEVEL=$(echo "$EVALUATION_TEXT" | awk '{printf "%02d\n", $3}')
 
-mkdir -p ~/Tmp/camcontdesc
+WORKDIR=~/Tmp/camcontest
 
-OUTPUT_FILE="$HOME/Tmp/camcontdesc/$ACTIVITY_LEVEL-$(TZ='Europe/Berlin' date +%Y-%m-%d-%H%M)-combined.png"
+mkdir -p $WORKDIR
+
+OUTPUT_FILE="$WORKDIR/$(TZ='Europe/Berlin' date +%Y-%m-%d-%H%M)-level-$ACTIVITY_LEVEL.png"
 
 magick \
   -background black -fill white -stroke black -strokewidth 0 \

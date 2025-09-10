@@ -8,7 +8,7 @@ $debug = true if ARGV.include?("--debug")
 
 
 BASEDIR = File.dirname(File.expand_path(__FILE__))
-INTERVAL = 120
+INTERVAL = 30
 STEPS = 3
 
 TMPDIR = File.join(BASEDIR, "work")

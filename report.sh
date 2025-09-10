@@ -8,9 +8,12 @@ RESIZE_WIDTH=640
 RESIZE_HEIGHT=480
 ACTIVITY_LEVEL=$(echo "$EVALUATION_TEXT" | awk '{printf "%02d\n", $3}')
 
-WORKDIR=~/Tmp/camcontest
+WORKDIR=~/Tmp/camcontest/$(TZ='Europe/Berlin' date +%Y-%m-%d-%H%M)-$ACTIVITY_LEVEL
 
 mkdir -p $WORKDIR
+
+cp ./work/*.jpg $WORKDIR/
+cp ./work/gemma-evaluation.txt $WORKDIR/
 
 OUTPUT_FILE="$WORKDIR/$(TZ='Europe/Berlin' date +%Y-%m-%d-%H%M)-level-$ACTIVITY_LEVEL.png"
 

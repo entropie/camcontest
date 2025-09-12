@@ -31,7 +31,7 @@ file-01-20251209-051524.jpg  file-02-20251209-051527.jpg  file-03-20251209-05153
 
 /home/mit/camcontest/report-202509120515-003/report-version-001.jpg
 Here are the timestamps from the top left of each image:
-                                                                                                                                                                                               *   Image 1: 2025-09-12 05:15:23
+*   Image 1: 2025-09-12 05:15:23
 *   Image 2: 2025-09-12 05:15:27
 *   Image 3: 2025-09-12 05:15:30
  Θ ls /home/mit/camcontest/report-202509120515-003/

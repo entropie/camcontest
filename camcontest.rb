@@ -19,11 +19,7 @@ FileUtils.mkdir_p(TMPDIR)
   sleep INTERVAL if STEPS != step
 end
 
-# send files with prompt to llm
-llmargs = ["prompt", "\"#{prompt}\"", "-m", "llama-server-vision"]
-arguments = files.map{ |f| ["-a", f] }
-
-stdout_str, status = Open3.capture2("llm", *(llmargs + arguments).flatten)
+stdout_str, status = llm_describe_images(prompt, files: files)
 
 
 # generate report

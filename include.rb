@@ -17,6 +17,15 @@ TMPDIR = File.join(BASEDIR, "work")
 FileUtils.rm_rf(TMPDIR)
 FileUtils.mkdir_p(TMPDIR)
 
+
+def llm_describe_images(prmpt, files: [])
+  # send files with prompt to llm
+  llmargs = ["prompt", "\"#{prmpt}\"", "-m", "llama-server-vision"]
+  arguments = files.map{ |f| ["-a", f] }
+
+  stdout_str, status = Open3.capture2("llm", *(llmargs + arguments).flatten)
+end
+
 def prompt(pfile = "prompt.txt")
   @prompt ||= File.readlines(File.join(BASEDIR, pfile)).join
 end

@@ -2,17 +2,17 @@ Analyze a sequence of N images from the same video camera taken in a short timef
 
 Fill The blanks yourself. 1: Chilling dogs. 10: Unrestful dogs. The goal is to have an understanding of how chill the dogs are.
 
-Scoring (1-10):
+SCORE (1-10):
 
     0: All dogs are lying still
     3: Dogs have heads up
-    5: A dog changing positions or 
+    5: A dog changing positions or standing
     5: Multiple (!) dogs changing positions 
     7: standing dog(s)
     10: Dogs are actively moving or interacting.
 
-Your response must be a single sentence starting exactly with Activity level [SCORE] and a very brief description. Dont reference viewports, images or cameras. Natural language.
+Your response must be a single sentence starting exactly with 'Level [SCORE] | [brief description]' Dont reference viewports, images or cameras. Natural language.
 
 Examples:
-    Activity level 4: with the white dog standing
-    Activity level 9: dogs are playing
+    5: the white dog standing
+    9: dogs are playing

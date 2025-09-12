@@ -13,12 +13,12 @@
 
 ```bash
  Θ rm -rf ~/camcontest && mkdir ~/camcontest
- Θ nix-shell -p imagemagick --run /home/mit/Source/camcontest/camcontest.rb
+ Θ /home/mit/Source/camcontest/camcontest.rb
 /home/mit/camcontest/report-202509120403/report--level-1-version-00.jpg
 Level 5 | The dogs are shifting positions slightly, with one dog mostly lying down and another moving towards
  Θ ls /home/mit/camcontest/report-202509120403
 file-01-20251209-040333.jpg  file-02-20251209-040336.jpg  file-03-20251209-040340.jpg  report--level-1-version-00.jpg
- Θ echo "describe" | nix-shell -p imagemagick --run "/home/mit/Source/camcontest/run-prompt-on-report.rb /home/mit/camcontest/report-202509120403/"
+ Θ echo "describe" | /home/mit/Source/camcontest/run-prompt-on-report.rb /home/mit/camcontest/report-202509120403/
 /home/mit/camcontest/report-202509120403/report--level-1-version-01.jpg
 Here's a description of the images you sent:
 

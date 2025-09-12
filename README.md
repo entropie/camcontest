@@ -22,30 +22,19 @@ Blow example shows how to run the script.
 
 ```bash
  Θ rm -rf ~/camcontest && mkdir ~/camcontest
- Θ /home/mit/Source/camcontest/camcontest.rb
-/home/mit/camcontest/report-202509120435/report--level-1-version-000.jpg
-Level 3 | The dogs are mostly lying down with occasional head lifts, indicating a state of relaxed observation
- Θ ls /home/mit/camcontest/report-202509120435/
-file-01-20251209-043533.jpg  file-02-20251209-043536.jpg  file-03-20251209-043539.jpg  prompt-version-000.json  report--level-1-version-000.jpg
- Θ echo "describe" | /home/mit/Source/camcontest/run-prompt-on-report.rb /home/mit/camcontest/report-202509120435/
-/home/mit/camcontest/report-202509120435/report--level-1-version-001.jpg
-Here's a description of the images you sent:
+ Θ ~/Source/camcontest/camcontest.rb
+/home/mit/camcontest/report-202509120515-003/report-version-000.jpg
+Level 3 | The dogs are mostly lying down with their heads up, suggesting a relaxed but slightly alert
+ Θ ls /home/mit/camcontest/report-202509120515-003/
+file-01-20251209-051524.jpg  file-02-20251209-051527.jpg  file-03-20251209-051531.jpg  prompt-version-000.json  report-version-000.jpg
+ Θ echo "list timestamps in the top left from every image" | ./run-prompt-on-report.rb /home/mit/camcontest/report-202509120515-003/"
 
-**Overall Impression:**
+/home/mit/camcontest/report-202509120515-003/report-version-001.jpg
+Here are the timestamps from the top left of each image:
+                                                                                                                                                                                               *   Image 1: 2025-09-12 05:15:23
+*   Image 2: 2025-09-12 05:15:27
+*   Image 3: 2025-09-12 05:15:30
+ Θ ls /home/mit/camcontest/report-202509120515-003/
+file-01-20251209-051524.jpg  file-02-20251209-051527.jpg  file-03-20251209-051531.jpg  prompt-version-000.json  prompt-version-001.json  report-version-000.jpg  report-version-001.jpg
 
-The images are black and white surveillance camera stills showing a domestic interior, likely a living room or home office. There’s a man sitting at a desk, and two dogs are present in the room. The room appears somewhat cluttered with laundry and various items.
-
-**Details:**
-
-*   **Man:** A man is sitting in a rolling office chair, facing away from the camera. He is wearing a grey shirt and dark pants. He’s leaning back in his chair, with his arms raised, appearing to be relaxed or possibly looking at something on a computer screen.
-
-*   **Dogs:** There are two dogs in the room. One is a large, black and white dog lying on a large, circular dog bed. The other is a smaller, white dog lying on the floor near the man's desk.
-
-*   **Furniture & Objects:**
-    *   A desk with a computer and various office supplies (pens, bottles, etc.).
-    *   A rolling chair.
-    *   A black dog bed with a white dog on it.
- Θ ls /home/mit/camcontest/report-202509120435/
-file-01-20251209-043533.jpg  file-03-20251209-043539.jpg  prompt-version-001.json          report--level-1-version-001.jpg
-file-02-20251209-043536.jpg  prompt-version-000.json      report--level-1-version-000.jpg
 ```

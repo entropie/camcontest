@@ -2,13 +2,22 @@
 
 * *camcontest.rb* saves STEPS images with INTERVAL delay in *./work*
   and submits them via `llm` to llama.cpp to get the activity level of
-  the dogs comparing the images
+  the dogs comparing the images. It generates a report.
   
-* *report.sh* combines images and banners them with the estimation
-  text from the *llm* and saves them (for debugging)
+* *run-prompt-on-report.rb* <*report-directory*> uses stdin PROMPT to
+  generate new report image and saves it in same folder. This is to
+  test other prompt on existing image sets.
 
 
 ## example
+
+
+Blow example shows how to run the script.
+
+* It fetches STEPS images with DELAY from the home assistant camera api
+* runs `llm` with the images attached and `$(cat prompt.txt)`
+* combines every input image and headers it with the llm output and
+* save everything in a directory where we can re-run different promps later for testing
 
 
 ```bash

@@ -23,24 +23,29 @@ Blow example shows how to run the script.
 ```bash
  Θ rm -rf ~/camcontest && mkdir ~/camcontest
  Θ /home/mit/Source/camcontest/camcontest.rb
-/home/mit/camcontest/report-202509120403/report--level-1-version-00.jpg
-Level 5 | The dogs are shifting positions slightly, with one dog mostly lying down and another moving towards
- Θ ls /home/mit/camcontest/report-202509120403
-file-01-20251209-040333.jpg  file-02-20251209-040336.jpg  file-03-20251209-040340.jpg  report--level-1-version-00.jpg
- Θ echo "describe" | /home/mit/Source/camcontest/run-prompt-on-report.rb /home/mit/camcontest/report-202509120403/
-/home/mit/camcontest/report-202509120403/report--level-1-version-01.jpg
+/home/mit/camcontest/report-202509120435/report--level-1-version-000.jpg
+Level 3 | The dogs are mostly lying down with occasional head lifts, indicating a state of relaxed observation
+ Θ ls /home/mit/camcontest/report-202509120435/
+file-01-20251209-043533.jpg  file-02-20251209-043536.jpg  file-03-20251209-043539.jpg  prompt-version-000.json  report--level-1-version-000.jpg
+ Θ echo "describe" | /home/mit/Source/camcontest/run-prompt-on-report.rb /home/mit/camcontest/report-202509120435/
+/home/mit/camcontest/report-202509120435/report--level-1-version-001.jpg
 Here's a description of the images you sent:
 
 **Overall Impression:**
 
-The images appear to be taken from a security camera, showing a room that is cluttered and appears to be a home office or workspace. There's a significant amount of laundry and dog bedding scattered around, suggesting a busy or relaxed atmosphere.
+The images are black and white surveillance camera stills showing a domestic interior, likely a living room or home office. There’s a man sitting at a desk, and two dogs are present in the room. The room appears somewhat cluttered with laundry and various items.
 
-**Key Elements:**
+**Details:**
 
-* **Subject:** A man is sitting at a desk, seemingly working or relaxing. He appears to be wearing a light-colored sweater.
-* **Dogs:** There are two dogs lying on the floor, one brown and one lighter-colored. They look comfortable and relaxed.
-* **Furniture and Equipment:** There’s a desk chair, a laptop, a small table, and what looks like a printer or scanner. 
-* **Background:** The background shows a wall with radiators and a portion of a doorway leading to another room.
- Θ ls /home/mit/camcontest/report-202509120403
-file-01-20251209-040333.jpg  file-02-20251209-040336.jpg  file-03-20251209-040340.jpg  report--level-1-version-00.jpg  report--level-1-version-01.jpg
+*   **Man:** A man is sitting in a rolling office chair, facing away from the camera. He is wearing a grey shirt and dark pants. He’s leaning back in his chair, with his arms raised, appearing to be relaxed or possibly looking at something on a computer screen.
+
+*   **Dogs:** There are two dogs in the room. One is a large, black and white dog lying on a large, circular dog bed. The other is a smaller, white dog lying on the floor near the man's desk.
+
+*   **Furniture & Objects:**
+    *   A desk with a computer and various office supplies (pens, bottles, etc.).
+    *   A rolling chair.
+    *   A black dog bed with a white dog on it.
+ Θ ls /home/mit/camcontest/report-202509120435/
+file-01-20251209-043533.jpg  file-03-20251209-043539.jpg  prompt-version-001.json          report--level-1-version-001.jpg
+file-02-20251209-043536.jpg  prompt-version-000.json      report--level-1-version-000.jpg
 ```

@@ -81,7 +81,8 @@ class Report
       files: @files,
       result_file: output_file,
       prompt: @prompt,
-      llm_result: @text
+      llm_result: @text,
+      level: level
     }
     File.open(prompt_file, "w+"){ |fp| fp.puts(jhash.to_json) }
   end

@@ -2,7 +2,7 @@ carefully examine each of the 3 images from the sequence of a surviliance camera
 
 compare the images, the positions of the dogs and what they do between each image
 
-the goal is to get an idea how they behave and how active they are on a SCORE from 1..10 while 1 is no motion and lying dogs and 10 is standing dogs (shifting in positions). Scale can be only above 5 if there are dogs standing or moving around
+the goal is to get an idea how they behave and how active they are on a SCORE from 1..10 while 1 is no motion and lying dogs and 10 is standing dogs (shifting in positions). SCORE can be only above 5 if there are dogs standing or moving around 
 
 Never mention images, camera (angles), furniture or  humans - this is 100% about the dogs
 

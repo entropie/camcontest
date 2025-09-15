@@ -23,9 +23,19 @@ stdout_str, status = llm_describe_images(prompt, files: files)
 
 level = stdout_str[/Level\s+(\d+)/, 1].to_i
 
-# generate report
-rep = Report.new(files, prompt, stdout_str.strip)
-rep.workdir = "/home/mit/camcontest/report-#{Time.now.strftime('%Y%m%d%H%M')}-#{"%03d" % level}"
-rep.save
+if level > 5
+  # generate report
+  rep = Report.new(files, prompt, stdout_str.strip)
+  rep.workdir = "/home/mit/camcontest/report-#{Time.now.strftime('%Y%m%d%H%M')}-#{"%03d" % level}"
+  rep.save
 
-puts rep.output_file, stdout_str
+  Trompie::MMQTT.new.
+    submit("test/synopsis/image", File.binread(rep.output_file), retain: true, qos: 0)
+
+  if level > 6
+  end
+  puts rep.output_file, stdout_str
+end
+
+
+

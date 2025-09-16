@@ -13,10 +13,12 @@
 
 We want to know when our dogs do shit while we not at home.
 
-The gpu work does an nvidia orin nano super integrated gpu system with
-8 gb shared (v)ram. Right now iam testing
-`https://huggingface.co/google/gemma-3n-E4B-it` with `CTX=1024`. The
-estimation of the image is usually done within 15 seconds.
+The GPU work does a Nvidia Jetson Orin Nano Super integrated GPU system with
+8 gb shared (v)ram.
+
+Right now iam testing `https://huggingface.co/google/gemma-3n-E4B-it`
+with `CTX=1024`. This is a text and vision model. The estimation of
+the image is usually done within 15 seconds.
 
 LLM backend is @llama.cpp shell cli [llm](https://github.com/simonw/llm).
 

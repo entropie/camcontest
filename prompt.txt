@@ -9,4 +9,4 @@ SCORE must be above 5 if there are dogs standing or moving around else below
 
 Never mention images, camera (angles), furniture or humans - this is 100% about the dogs.
 
-Respond 'Level [SCORE] | very brief description of dogs posture
+Respond 'Level [SCORE] | very brief description of dogs posture'

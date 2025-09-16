@@ -27,7 +27,7 @@ Blow example shows how to run the script.
 Level 3 | The dogs are mostly lying down with their heads up, suggesting a relaxed but slightly alert
  Θ ls /home/mit/camcontest/report-202509120515-003/
 file-01-20251209-051524.jpg  file-02-20251209-051527.jpg  file-03-20251209-051531.jpg  prompt-version-000.json  report-version-000.jpg
- Θ echo "list timestamps in the top left from every image" | ./run-prompt-on-report.rb /home/mit/camcontest/report-202509120515-003/"
+ Θ echo "list timestamps in the top left from every image" | ./run-prompt-on-report.rb /home/mit/camcontest/report-202509120515-003/
 
 /home/mit/camcontest/report-202509120515-003/report-version-001.jpg
 Here are the timestamps from the top left of each image:

@@ -20,7 +20,7 @@ Right now iam testing `https://huggingface.co/google/gemma-3n-E4B-it`
 with `CTX=1024`. This is a text and vision model. The estimation of
 the image is usually done within 15 seconds.
 
-LLM backend is @llama.cpp shell cli [llm](https://github.com/simonw/llm).
+LLM backend is @llama.cpp via shell cli [llm](https://github.com/simonw/llm).
 
 ## Example
 

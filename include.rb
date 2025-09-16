@@ -20,7 +20,7 @@ FileUtils.mkdir_p(TMPDIR)
 
 def llm_describe_images(prmpt, files: [])
   # send files with prompt to llm
-  llmargs = ["prompt", "\"#{prmpt}\"", "-m", "llama-server-vision"]
+  llmargs = ["prompt", "\"#{prmpt}\"", "-m", "llama-server-vision", "-n"]
   arguments = files.map{ |f| ["-a", f] }
 
   stdout_str, status = Open3.capture2("llm", *(llmargs + arguments).flatten)

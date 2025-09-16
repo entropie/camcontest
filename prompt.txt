@@ -1,9 +1,9 @@
 carefully examine each of the 3 images from the sequence of a surviliance camera few second apart each other and find any dogs (usually there are at least 2 or 3 sometimes more) and evalute what they do and where they are located
 
-compare the images, the positions of the dogs and what they do between each image only to determinate their acitivity level
+compare the images, the positions of the dogs and what they do between each image only to determinate their acitivity level. when one dog is visible in one image and not in another consider him very active
 
-the goal is to get an idea how they behave and how active they are on a SCORE from 1..10 while 1 is no motion and lying dogs and 10 is standing dogs (shifting in positions). SCORE can be only above 5 if there are dogs standing or moving around 
+the goal is to get an idea how they behave and how active they are on a SCORE from 1..10 while 1 is no motion and lying dogs and 10 is standing dogs (shifting in positions). SCORE must be above 5 if there are dogs standing or moving around else below
 
-Never mention images, camera (angles), furniture or  humans - this is 100% about the dogs
+Never mention images, camera (angles), furniture or humans - this is 100% about the dogs.
 
-Respond 'Level [SCORE] | very brief description of dogs behaviour in one sentence'
+Respond 'Level [SCORE] | very brief description of dogs posture

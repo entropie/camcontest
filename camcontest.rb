@@ -23,7 +23,7 @@ stdout_str, status = llm_describe_images(prompt, files: files)
 
 level = stdout_str[/Level\s+(\d+)/, 1].to_i
 
-if level > 5
+#if level > 5
   # generate report
   rep = Report.new(files, prompt, stdout_str.strip)
   rep.workdir = "/home/mit/camcontest/report-#{Time.now.strftime('%Y%m%d%H%M')}-#{"%03d" % level}"
@@ -35,7 +35,7 @@ if level > 5
   if level > 6
   end
   puts rep.output_file, stdout_str
-end
+#end
 
 
 

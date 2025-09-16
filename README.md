@@ -18,7 +18,7 @@ The GPU work does a Nvidia Jetson Orin Nano Super integrated GPU system with
 
 Right now iam testing [google/gemma-3n-E4B-it](https://huggingface.co/google/gemma-3n-E4B-it)
 with `CTX=1024`. This is a text and vision model. The estimation of
-the image is usually done within 15 seconds.
+the image(s) is usually done within 15 seconds.
 
 LLM backend is @llama.cpp via shell cli [llm](https://github.com/simonw/llm).
 

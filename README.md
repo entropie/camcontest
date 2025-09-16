@@ -12,7 +12,7 @@
 ## example
 
 
-Blow example shows how to run the script.
+Below example shows how to run the script.
 
 * It fetches STEPS images with DELAY from the home assistant camera api
 * runs `llm` with the images attached and `$(cat prompt.txt)`

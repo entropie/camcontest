@@ -1,12 +1,15 @@
 # CameraContinuedEstimation
 
-* *camcontest.rb* saves STEPS images with INTERVAL delay in *./work*
+* *bin/fetch-images-and-run.rb* saves STEPS images with INTERVAL delay in *./work*
   and submits them via `llm` to llama.cpp to get the activity level of
   the dogs comparing the images. It generates a report.
   
-* *run-prompt-on-report.rb* <*report-directory*> uses stdin PROMPT to
+* *bin/run-prompt-on-report.rb* <*report-directory*> uses stdin PROMPT to
   generate new report image and saves it in same folder. This is to
   test other prompt on existing image sets.
+
+* *bin/show-reports.rb* <*report-directory*> generates a list if all
+  result generations with corresponding prompts
 
 
 # Motivation

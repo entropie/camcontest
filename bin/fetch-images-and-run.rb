@@ -5,10 +5,6 @@ require_relative "../lib/camcontest"
 ha = Trompie::HA.new
 files = []
 
-# cleanup
-FileUtils.rm_rf(TMPDIR)
-FileUtils.mkdir_p(TMPDIR)
-
 force = ARGV.include?("--force")
 
 if ha.make_req(:states, "sensor.people_home").true? and not force

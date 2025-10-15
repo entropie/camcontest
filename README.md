@@ -33,20 +33,60 @@ Below example shows how to run the script.
 
 
 ```bash
- Θ rm -rf ~/camcontest && mkdir ~/camcontest
- Θ ~/Source/camcontest/camcontest.rb
-/home/mit/camcontest/report-202509120515-003/report-version-000.jpg
-Level 3 | The dogs are mostly lying down with their heads up, suggesting a relaxed but slightly alert
- Θ ls /home/mit/camcontest/report-202509120515-003/
-file-01-20251209-051524.jpg  file-02-20251209-051527.jpg  file-03-20251209-051531.jpg  prompt-version-000.json  report-version-000.jpg
- Θ echo "list timestamps in the top left from every image" | ./run-prompt-on-report.rb /home/mit/camcontest/report-202509120515-003/
-
-/home/mit/camcontest/report-202509120515-003/report-version-001.jpg
+[nix-shell]  Θ rm -rf ~/camcontest && mkdir ~/camcontest
+[nix-shell]  Θ ~/Source/camcontest/bin/fetch-images-and-run.rb --force
+/home/mit/camcontest/report-202510151825-003/report-version-000.jpg
+Level 3 | Both dogs are lying down, seemingly relaxed.
+[nix-shell]  Θ echo "list timestamps in the top left from every image" | ~/Source/camcontest/bin/run-prompt-on-report.rb /home/mit/camcontest/report-202510151825-003/
+/home/mit/camcontest/report-202510151825-003/report-version-001.jpg
 Here are the timestamps from the top left of each image:
-*   Image 1: 2025-09-12 05:15:23
-*   Image 2: 2025-09-12 05:15:27
-*   Image 3: 2025-09-12 05:15:30
- Θ ls /home/mit/camcontest/report-202509120515-003/
-file-01-20251209-051524.jpg  file-02-20251209-051527.jpg  file-03-20251209-051531.jpg  prompt-version-000.json  prompt-version-001.json  report-version-000.jpg  report-version-001.jpg
 
+*   **Image 1:** 2025-10-15 18:24:47
+*   **Image 2:** 2025-10-15 18:24:51
+*   **Image 3:** 2025-10-15 18:24:54
+[nix-shell]  Θ date
+Wed 15 Oct 18:26:40 CEST 2025
+[nix-shell]  Θ ~/Source/camcontest/bin/show-reports.rb /home/mit/camcontest/report-202510151825-003/
+level   3
+file
+        /home/mit/camcontest/report-202510151825-003/report-version-000.jpg
+prompt
+        carefully examine each of the 3 images from the sequence of
+a surviliance camera few second apart each other and find
+any dogs (usually there are at least 2 or 3 sometimes more)
+and evalute what they do and where they are located
+
+compare the images, the positions of the dogs and what
+posture changes between each image to only determinate their
+acitivity level. when one dog is visible in one image and
+not in another consider him very active
+
+the goal is to get an idea how they behave and how active
+they are on a SCORE from 1..10 while 1 is lying on the
+ground 10 is standing dogs or positin shifting.
+
+SCORE must be below 5 if all dogs lying
+SCORE must be above 5 if there are dogs standing or moving
+around else below
+
+Never mention images, camera (angles), furniture or humans -
+this is 100% about the dogs.
+
+Respond 'Level [SCORE] | very brief description of dogs
+posture'
+result
+        Level 3 | Both dogs are lying down, seemingly relaxed.
+------------------------------------------------------------
+level   0
+file
+        /home/mit/camcontest/report-202510151825-003/report-version-001.jpg
+prompt
+        list timestamps in the top left from every image
+result
+        Here are the timestamps from the top left of each image:
+
+*   **Image 1:** 2025-10-15 18:24:47
+*   **Image 2:** 2025-10-15 18:24:51
+*   **Image 3:** 2025-10-15 18:24:54
+------------------------------------------------------------
 ```

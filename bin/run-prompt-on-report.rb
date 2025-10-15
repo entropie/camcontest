@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 
-require "fileutils"
-
-require_relative "include"
+require_relative "../lib/camcontest"
 
 prompt = 
   if !STDIN.tty? && !STDIN.eof?

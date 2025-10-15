@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "lib/camcontest"
+require_relative "../lib/camcontest"
 
 ha = Trompie::HA.new
 files = []

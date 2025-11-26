@@ -8,7 +8,8 @@ files = []
 force = ARGV.include?("--force")
 
 if ha.make_req(:states, "sensor.people_home").true? and not force
-  abort("people are reported home, we abort here")
+  puts "people are reported home, we abort here"
+  exit 0
 end
 
 # get files from ha
@@ -30,7 +31,7 @@ if level > 5 or force
   rep.workdir = "/home/mit/camcontest/report-#{Time.now.strftime('%Y%m%d%H%M')}-#{"%03d" % level}"
   rep.save
 
-  if level > 6
+  if level >= 6
     Trompie::MMQTT.new.
       submit("test/synopsis/image", File.binread(rep.output_file), retain: true, qos: 0)
   end

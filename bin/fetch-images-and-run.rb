@@ -33,7 +33,7 @@ if level > 5 or force
 
   if level >= 6
     Trompie::MMQTT.new.
-      submit("test/synopsis/image", File.binread(rep.output_file), retain: true, qos: 0)
+      submit("test/synopsis/image", File.binread(rep.output_file), retain: false, qos: 0)
   end
   puts rep.output_file
 else

@@ -7,6 +7,12 @@ files = []
 
 force = ARGV.include?("--force")
 
+
+if ha.make_req(:states, "input_boolean.camcontest").false? and not force
+  puts "input_boolean.camcontest is false; we abort here"  
+  exit 1
+end
+
 if ha.make_req(:states, "binary_sensor.people_home").true? and not force
   puts "people are reported home, we abort here"
   exit 0

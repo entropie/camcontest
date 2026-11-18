@@ -1,12 +1,36 @@
-carefully examine each of the 3 images from the sequence of a surviliance camera few second apart each other and find any dogs (usually there are at least 2 or 3 sometimes more) and evalute what they do and where they are located
+Compare these three snapshots from the same camera in chronological order,
+three seconds apart. Describe the clearest activity you can observe from
+any one dog. Follow each dog by its appearance and location. A single
+visible dog is enough to score the sequence.
 
-compare the images, the positions of the dogs and what posture changes between each image to only determinate their acitivity level. when one dog is visible in one image and not in another consider him very active
+Use this scale:
 
-the goal is to get an idea how they behave and how active they are on a SCORE from 1..10 while 1 is lying on the ground 10 is standing dogs or positin shifting.
+1 — Resting. The dog stays lying in the same position across all three
+    frames. A head held up throughout still counts as resting.
+2 — Slight movement while lying down, such as a small head turn.
+3 — Clear head movement while lying down: the dog lifts or lowers its
+    head, or looks in different directions across the frames.
+4 — The dog adjusts its body while staying down: shifts its weight,
+    rolls onto its other side, or changes its lying position.
+5 — Unclear. No dog is clearly visible, or the evidence is too ambiguous
+    to distinguish rest from activity. Briefly say what is unclear.
+6 — Informational. The dog sits or stands in the same place, or clearly
+    gets up or lies down there.
+7 — The dog takes a few steps or turns around on its resting spot.
+8 — The dog walks to a different part of the room.
+9 — The dog keeps moving between locations across both frame intervals.
+10 — The dog shows rapid, substantial movement across the room, such as
+     clearly running.
 
-SCORE must be below 5 if all dogs lying
-SCORE must be above 5 if there are dogs standing or moving around else below
+For multiple dogs, score the highest activity you can clearly observe
+in a single dog. Use 5 only when you cannot give a meaningful assessment.
+A dog disappearing behind another dog or out of view is not by itself
+evidence of fast movement.
 
-Never mention images, camera (angles), furniture or humans - this is 100% about the dogs.
+Describe what changed and where, for example "on the sofa" or "by the
+door". If the posture stays the same, describe it as such. Keep the
+description specific to these few seconds; avoid guesses about mood,
+health, or how long the behavior has lasted.
 
-Respond 'Level [SCORE] | very brief description of dogs posture'
+Reply with exactly one line:
+Level <integer from 1 to 10> | <brief observation>
